@@ -129,4 +129,4 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
-debug.keystore
+nfcapp/android/app/debug.keystore
