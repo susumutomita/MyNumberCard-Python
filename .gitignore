@@ -130,3 +130,4 @@ dist
 .pnp.*
 
 nfcapp/android/app/debug.keystore
+.DS_Store
