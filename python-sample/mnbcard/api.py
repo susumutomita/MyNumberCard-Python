@@ -1,4 +1,5 @@
 import logging
+import binascii
 
 logger = logging.getLogger(__name__)
 
@@ -64,9 +65,13 @@ class Card:
         # pos 1: 0x2(2-5)
         # pos 2: attr length
         # pos 3 - n: attr data
+        # print(data)
+        # print(binascii.hexlify(bytes(data)))
         attr_lengh = data[segment_start + 2]
         attr_start = segment_start + 3
         attr_data = data[attr_start : attr_start + attr_lengh]
+        print(attr_data)
+        print(bytes(attr_data).decode("utf-8"))
         return bytes(attr_data).decode("utf-8")
 
     def select_file_profile_ap(self):
